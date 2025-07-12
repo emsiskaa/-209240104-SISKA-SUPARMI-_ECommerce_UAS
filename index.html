@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moukukue by Siska website sederhana</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css\style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">MOUKU<span>KUE</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#products">Produk</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div> 
+
+      <div class="shopping-cart"></div>
+
+      <!-- search form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- search forn end -->
+
+      <!-- shopping cart start -->
+       <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/product/1.jpg" alt="product 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">Rp110.000</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+         </div>
+        <div class="cart-item">
+          <img src="img/product/1.jpg" alt="product 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">Rp110.000</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+         </div>
+        <div class="cart-item">
+          <img src="img/product/1.jpg" alt="product 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">Rp110.000</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+         </div>
+       </div>
+      <!-- shopping cart end -->
+
+    </nav>
+
+    <!-- Navbar end -->
+
+    <!-- hero section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Kue Basah <span>&</span> Kue Kering</h1>
+        <br />
+        <p>nikmati kue dengan rasa otentik, since 2020</p>
+        <br />
+
+        <a href="#products" class="cta">Pesan Disini</a>
+      </main>
+    </section>
+
+    <!-- hero section end -->
+
+    <!-- about section start -->
+
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+        </div>
+
+        <div class="content">
+          <h3>Kenapa Memilih Kue Kami</h3>
+          <p>
+            Moukukue berdiri sejak 2020 dirintis oleh ibu dan anak(siska) yang memiliki hobby yang sama yaitu membuat kue dan berekperimen di dapur. kami selalu berusaha memberikan yang
+            terbaik kepada pelanggan
+          </p>
+          <p>
+            Moukukue mengggunakan bahan-bahan pilihan yang berkualitas sehingga
+            memiliki rasa yang begitu autentik
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- about section end -->
+
+    <!-- product section start -->
+    <section class="products" id="products">
+      <h2><span>Produk Unggulan</span> Kami</h2>
+      <p>Produk kami terdari dari kue basah dana kue kering dengan berbagai rasa manis dan gurih</p>
+
+      <div class="row">
+        <div class="product-card">
+          <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Risoles Isi Sayur', 'Rp 95K', 'img/1.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/1.jpg" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Risoles Isi Sayur</h3>
+            <p>Kulit risoles yang renyah diluar dan lembut didalam dipadukan dengan isian sayur wortel dan kentang menambah kenikmatan ketika disantap.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 95K <span>Rp 100k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Bolu Kukus Blueberry Premium', 'Rp 130K', 'img/2.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+        </div>
+          <div class="product-image">
+            <img src="img/2.jpg" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>Bolu Kukus Blueberry Premium</h3>
+            <p>Tektur bolu yang lembut dengan dipadukan dengan selai blueberry yang segar menjadikan perpaduan rasa yang enak dan nikmat.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 130K <span>Rp 150k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Donat Cemohok', 'Rp 100K', 'img/3.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/3.jpg" alt="Product 3" />
+          </div>
+          <div class="product-content">
+            <h3>Donat Cemohok</h3>
+            <p> Rasakan sensasi donat tradisional khas rumahan dengan cita rasa yang tak terlupakan! Donat Cemohok hadir dengan tekstur lembut, empuk di dalam, dan sedikit renyah di luar. Cocok dinikmati kapan saja—untuk sarapan, teman ngopi, atau camilan sore hari.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 100K <span>Rp 125k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+         <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Lapis  Flowers Santan', 'Rp 95K', 'img/4.2.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/4.2.jpg" alt="Product 4" />
+          </div>
+          <div class="product-content">
+            <h3>Lapis Flowers Santan</h3>
+            <p>Perpaduan sempurna antara rasa gurih santan yang khas dan manis yang pas di lidah. Setiap lapisnya dibuat dengan teliti, menghasilkan tekstur lembut dan aroma harum yang bikin ketagihan.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 95K <span>Rp 100k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+        <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Dadar Gulung Gula Aren', 'Rp 75K', 'img/6.2.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/6.2.jpg" alt="Product 5" />
+          </div>
+          <div class="product-content">
+            <h3>Dadar Gulung Gula Aren</h3>
+            <p>Memadukan kulit pandan yang lembut dan harum dengan isian kelapa parut yang disiram legitnya gula aren asli. Rasa manisnya alami, tidak bikin enek—pas banget untuk camilan sehat dan nikmat.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 75K <span>Rp 100K</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+         <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Putu Ayu Coconut Pandan', 'Rp 75K', 'img/7.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/7.jpg" alt="Product 6" />
+          </div>
+          <div class="product-content">
+            <h3>Putu Ayu Coconut Pandan</h3>
+            <p>kue tradisional khas Indonesia yang menggoda dengan kombinasi aroma pandan yang harum dan gurihnya kelapa parut segar.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 75K <span>Rp 100k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Kue Ali', 'Rp 65K', 'img/8.2.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/8.2.jpg" alt="Product 7" />
+          </div>
+          <div class="product-content">
+            <h3>Kue Ali</h3>
+            <p>kue tradisional khas Sunda yang memiliki cita rasa manis legit dan aroma khas dari gula merah. Kue ini berbentuk cincin kecil dengan tekstur renyah di luar dan sedikit kenyal di dalam.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 65K <span>Rp 80k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+         <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Sistik Bawang Premium', 'Rp 60K', 'img/9.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/9.jpg" alt="Product 8" />
+          </div>
+          <div class="product-content">
+            <h3>Sistik Bawang Premium</h3>
+            <p>camilan gurih yang renyah dengan cita rasa bawang yang khas dan menggoda.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 60K <span>Rp 70k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+         <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Keripik Singkong', 'Rp 55K', 'img/4.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/4.jpg" alt="Product 9" />
+          </div>
+          <div class="product-content">
+            <h3>Keripik Singkong</h3>
+            <p>Camilan klasik yang digemari sepanjang masa, dibuat dari singkong pilihan yang diiris tipis dan digoreng hingga renyah sempurna. Dengan bumbu khas yang meresap ke setiap lapisan, keripik ini menawarkan perpaduan rasa gurih dan renyah yang bikin susah berhenti.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 55K <span>Rp 70k</span></div>
+            </div>
+        </div>
+        <div class="product-card">
+          <div class="product-icons">
+          <a href="#" onclick="event.preventDefault(); addToCart('Kue Noga Peanut', 'Rp 75K', 'img/10.jpg')"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+    </div>
+          <div class="product-image">
+            <img src="img/10.jpg" alt="Product 10" />
+          </div>
+          <div class="product-content">
+            <h3>Kue Noga Peanut</h3>
+            <p>Perpaduan sempurna antara kacang tanah sangrai berkualitas dan karamel gula yang manis legit, menghasilkan camilan tradisional yang renyah dan memikat.</p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">Rp 75K<span>Rp 100k</span></div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- product section end -->
+
+    <!-- contact section start -->
+    <section id="contact" class="contact">
+      <h2>Kont<span>ak k</span>ami</h2>
+      <p>Punya Pertanyaan?</p>
+      <p>Hubungi Kami!</p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3961.518685558213!2d107.44256800000001!3d-6.828236000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNDknNDEuNyJTIDEwN8KwMjYnMzMuMiJF!5e0!3m2!1sid!2sid!4v1745051287169!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-group">
+            <i data-feather="message-square"></i>
+            <input type="text" placeholder="Pesan" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="No HP" />
+          </div>
+          <button type="Submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/moukukue?igsh=MWxnZXZvaTgyZ2gzaw=="><i data-feather="instagram"></i></a>
+        <a href="https://wa.me/6288218871566"><i data-feather="message-circle"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#products">Produk</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>created by <a href="">Siskasuparmi</a>. | &copy;2025.</p>
+      </div>
+    </footer>
+    <!-- footer end -->
+  
+    <!-- my javascript -->
+    <script src="js/script.js"></script>
+
+    <!-- feather icons -->
+    <script>
+       
+      feather.replace();
+    </script>
+  </body>
+</html>
